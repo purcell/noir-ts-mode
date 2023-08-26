@@ -1,8 +1,10 @@
 # noir-ts-mode
+[![MELPA](https://melpa.org/packages/noir-ts-mode-badge.svg)](https://melpa.org/#/noir-ts-mode)
+[![MELPA Stable](https://stable.melpa.org/packages/noir-ts-mode-badge.svg)](https://stable.melpa.org/#/noir-ts-mode)
 
 An Emacs tree-sitter mode for the Noir Language.
 
-### Installation
+## Installation
 
 1. Make sure you have Emacs version 29.x and above.
 
@@ -23,7 +25,7 @@ M-x treesit-install-language-grammar
 (treesit-language-available-p 'noir)
 ```
 
-5. Download `noir-ts-mode.el` from the [GitHub repository](https://github.com/hhamud/tree-sitter-noir).
+5. Download `noir-ts-mode.el` from the [GitHub repository](https://github.com/hhamud/noir-ts-mode).
 
 6. Move `noir-mode.el` to a directory in your Emacs load path.
 
@@ -33,7 +35,7 @@ M-x treesit-install-language-grammar
 (require noir-ts-mode)
 ```
 
-### Usage
+## Usage
 
 Once noir-ts-mode.el is installed, it will automatically be enabled when you open a .nr file. The major mode will provide syntax highlighting for editing Noir code.
 
