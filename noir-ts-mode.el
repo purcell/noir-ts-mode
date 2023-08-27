@@ -6,6 +6,7 @@
 ;; Maintainer : Hamza Hamud <self@hamzahamud.com>
 ;; Created    : July 2023
 ;; Keywords   : noir languages tree-sitter
+;; Package-Requires: ((emacs "29.0.90"))
 
 ;; This file is not part of GNU Emacs.
 
@@ -37,12 +38,18 @@
 (declare-function treesit-node-start "treesit.c")
 (declare-function treesit-node-type "treesit.c")
 
+
+(defgroup noir-ts nil
+  "Major mode for editing Noir code."
+  :prefix "noir-ts-"
+  :group 'languages)
+
+
 (defcustom noir-ts-mode-indent-offset 4
   "Number of spaces for each indentation step in `noir-ts-mode'."
-  :version "29.1"
   :type 'integer
   :safe 'integerp
-  :group 'noir)
+  :group 'noir-ts)
 
 (defvar noir-ts-mode--syntax-table
   (let ((table (make-syntax-table)))
@@ -187,9 +194,6 @@
   (when (treesit-ready-p 'noir)
     (treesit-parser-create 'noir)
 
-    ;; Set the level of syntax highlighting detail
-    (setq-local treesit-font-lock-level 4)
-
     ;; Comments.
     (setq-local comment-start "// ")
     (setq-local comment-end "")
@@ -216,6 +220,7 @@
 
 
     (treesit-major-mode-setup)))
+
 
 (provide 'noir-ts-mode)
 
