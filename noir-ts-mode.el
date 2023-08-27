@@ -2,11 +2,13 @@
 
 ;; Copyright (C) Hamza Hamud,
 
+;; Version    : 0.0.1
 ;; Author     : Hamza Hamud <self@hamzahamud.com>
+;; Url        : https://github.com/hhamud/noir-ts-mode
 ;; Maintainer : Hamza Hamud <self@hamzahamud.com>
 ;; Created    : July 2023
 ;; Keywords   : noir languages tree-sitter
-;; Package-Requires: ((emacs "29.0.90"))
+;; Package-Requires: ((emacs "29.1"))
 
 ;; This file is not part of GNU Emacs.
 
@@ -24,7 +26,7 @@
 ;; along with Noir-ts-mode.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-;;
+;; This package implements a major-mode for editing noir source code.
 
 ;;; Code:
 
